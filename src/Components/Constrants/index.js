@@ -169,7 +169,7 @@ const navLinks = [
   },
  ];
  
- export {
+ export  {
   navLinks,
   cocktailLists,
   mockTailLists,

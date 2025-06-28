@@ -1,5 +1,7 @@
 import React from 'react'
-import NavLinks from "../Constrants/index.js";
+import {navLinks} from "../Constrants/index.js";
+
+
 const Navbar = () => {
   return (
     <>
@@ -10,7 +12,11 @@ const Navbar = () => {
           </a>
 
           <ul>
-            {NavLinks}
+            {navLinks.map((link) => (
+              <li key={link.id}>
+                <a href={`#${link.id}`}>{link.title}</a>
+              </li>
+            ))}
           </ul>
         </div>
       </nav>
