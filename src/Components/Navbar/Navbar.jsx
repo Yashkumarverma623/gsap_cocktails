@@ -1,5 +1,5 @@
 import React from 'react'
-import {  } from "module";
+import NavLinks from "../Constrants/index.js";
 const Navbar = () => {
   return (
     <>
@@ -8,6 +8,10 @@ const Navbar = () => {
           <a href="#home" className="flex items-center gap-2">
             <p>Velvet Pour</p>
           </a>
+
+          <ul>
+            {NavLinks}
+          </ul>
         </div>
       </nav>
     </>
