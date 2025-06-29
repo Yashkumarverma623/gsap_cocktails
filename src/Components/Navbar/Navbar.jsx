@@ -21,7 +21,7 @@ const Navbar = () => {
      duration: 1,
      ease:"power1.inOut"
     })
-  }, [])
+  })
 
 
 

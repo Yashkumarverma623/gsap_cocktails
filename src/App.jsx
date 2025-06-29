@@ -14,6 +14,7 @@ function App() {
     <main>
       <Navbar/>
       <Hero/>
+      <div className="h-dvh bg-black"></div>
     </main>
     </>
   )
