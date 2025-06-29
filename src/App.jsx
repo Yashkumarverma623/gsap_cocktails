@@ -7,6 +7,8 @@ const Hero = lazy(()=>import('./Components/Hero/Hero.jsx'))
 const Cocktails = lazy(()=>import('./Components/Cocktails/Cocktails.jsx'))
 const About = lazy(()=> import ('./Components/About/About.jsx'))
 const Art = lazy(()=> import('./Components/Art/Art.jsx'))
+const Menu = lazy(()=> import('./Components/Menu/Menu.jsx'))
+
 
 function App() {
  
@@ -19,6 +21,7 @@ function App() {
       <Cocktails/>
       <About/>
       <Art/>
+      <Menu/>
     </main>
     </>
   )
