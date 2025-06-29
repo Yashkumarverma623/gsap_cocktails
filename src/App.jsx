@@ -6,6 +6,7 @@ const Navbar = lazy(()=>import('./Components/Navbar/Navbar.jsx'))
 const Hero = lazy(()=>import('./Components/Hero/Hero.jsx'))
 const Cocktails = lazy(()=>import('./Components/Cocktails/Cocktails.jsx'))
 const About = lazy(()=> import ('./Components/About/About.jsx'))
+const Art = lazy(()=> import('./Components/Art/Art.jsx'))
 
 function App() {
  
@@ -17,6 +18,7 @@ function App() {
       <Hero/>
       <Cocktails/>
       <About/>
+      <Art/>
     </main>
     </>
   )
