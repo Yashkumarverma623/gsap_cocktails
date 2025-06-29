@@ -35,6 +35,11 @@ maskTimeline
   duration:1,
   ease:'power1.inOut'
 })
+.to('.masked-content',{
+  opacity:1,
+  duration:1,
+  ease:'power1.inOut'
+})
 })
 
   return (
@@ -72,7 +77,7 @@ maskTimeline
             Sip Worthy Perfection
           </h2>
           <div className="masked-content">
-            <h3>Made With Craft, Poured With Passion</h3>
+            <h3>Made with craft, Poured with passion</h3>
             <p>This isn't just a drink. it's a carefully created moment made just for you.</p>
           </div>
         </div>
