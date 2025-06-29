@@ -3,7 +3,19 @@ import { useGSAP } from "@gsap/react";
 import { SplitText, ScrollTrigger } from "gsap/all";
 gsap.registerPlugin(ScrollTrigger);
 import { gsap } from "gsap";
+import { useRef } from "react";
+
+
+
+
 const Hero = () => {
+
+
+const videoRef = useRef();
+
+const videotimelineRef = useRef()
+
+
 
 useGSAP(()=>{
   const heroSplit = new SplitText('.title',{type:'chars, words'})
@@ -43,6 +55,30 @@ useGSAP(()=>{
 
   .to('.right-leaf',{y:300},0)
   .to('.left-leaf',{y:-300},0)
+   
+
+  const isMobile = window.innerWidth <= 768;
+
+  const startValue = isMobile ? 'top 50%'  : 'center 60%'
+
+  const endValue = isMobile ? '120% top' : 'bottom top'
+
+
+  videotimelineRef.current = gsap.timeline({
+    scrollTrigger:{
+      trigger:'video',
+      start: startValue,
+      end: endValue,
+      scrub:true,
+      pin:true
+    }
+  })
+
+  videoRef.current.onloadedmetadata = () => {
+    videotimelineRef.current.to(videoRef.current, {
+     currentTime: videoRef.current.duration
+    })
+  }
 },[])
 
   return (
@@ -61,7 +97,7 @@ useGSAP(()=>{
                 Sip the spirit <br/>of Summer 
               </p>
             </div>
-          <div className="cocktails">
+          <div className="view-cocktails">
             <p className="subtitle">
             Every cocktail on our menu is a blend of premium ingredients, creative flair, and timeless recipes – designed to delight your senses.
             </p>
@@ -71,6 +107,18 @@ useGSAP(()=>{
           </div>
         </div>
       </section>
+
+      <div className="video absolute inset-0">
+         <video 
+         ref={videoRef}
+         src="/videos/output.mp4"
+         muted
+         playsInline
+         preload="auto"
+         
+         />
+         
+      </div>
     </>
   )
 }
