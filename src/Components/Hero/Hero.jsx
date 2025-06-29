@@ -26,7 +26,7 @@ useGSAP(()=>{
     yPercent:100,
     duration:1.8,
     ease:'expo.out',
-    stagger:0.06,
+    stagger:0.05,
     delay:1
   })
 
@@ -65,7 +65,7 @@ useGSAP(()=>{
             <p className="subtitle">
             Every cocktail on our menu is a blend of premium ingredients, creative flair, and timeless recipes – designed to delight your senses.
             </p>
-            <a href="#cocktails">View Cocktails</a>
+            <a href="#cocktails" className="subtitle">View Cocktails</a>
           </div>
 
           </div>
