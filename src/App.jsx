@@ -8,6 +8,8 @@ const Cocktails = lazy(()=>import('./Components/Cocktails/Cocktails.jsx'))
 const About = lazy(()=> import ('./Components/About/About.jsx'))
 const Art = lazy(()=> import('./Components/Art/Art.jsx'))
 const Menu = lazy(()=> import('./Components/Menu/Menu.jsx'))
+const Contact = lazy(()=> import('./Components/Contact/Contact.jsx'))
+
 
 
 function App() {
@@ -22,6 +24,7 @@ function App() {
       <About/>
       <Art/>
       <Menu/>
+      <Contact/>
     </main>
     </>
   )

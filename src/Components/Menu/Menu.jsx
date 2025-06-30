@@ -20,6 +20,27 @@ const Menu = () => {
 
       
   }, [currentIndex])
+
+useGSAP(()=>{
+  const parallaxLeaf = gsap.timeline({
+    scrollTrigger: {
+      trigger:'#menu',
+      start:'top 30%',
+      end:'bottom 80%',
+      scrub:true
+    },
+  })
+
+  parallaxLeaf
+  .to('#m-right-leaf',{
+    y:200,
+  })
+  .to('#m-left-leaf',{
+    y:-200,
+
+  })
+})
+  
    
   const totalCocktails = sliderLists.length
 
@@ -43,8 +64,8 @@ const Menu = () => {
   return (
     <>
       <section id="menu" aria-labelledby="menu-heading" >
-        <img src="/images/slider-left-leaf.png" id="m-left-leaf" />
-        <img src="/images/slider-right-leaf.png" id="m-right-leaf" />
+        <img src="/images/hero-left-leaf.png" id="m-left-leaf" />
+        <img src="/images/hero-right-leaf.png" id="m-right-leaf" />
 
         <h2 id="menu-heading" className="sr-only">
            Cocktail Menu
